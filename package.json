@@ -3,12 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@chakra-ui/react": "^2.0.2",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@influxdata/influxdb-client": "^1.26.0",
+    "@solana/web3.js": "^1.42.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "cytoscape": "^3.21.1",
+    "framer-motion": "4.1.17",
     "react": "^18.1.0",
+    "react-datepicker": "^4.8.0",
+    "react-datetime-picker": "^3.5.0",
     "react-dom": "^18.1.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "4.0.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+#cy {
+  height:80%;
+  width:80%;
+  background-color: black;
+  border:1px solid;
+  border-color:white;
+}
+
+#parent_cy {
+  height:85vh;
+  width:100vw;
+  background-color:black;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+}
