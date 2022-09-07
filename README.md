@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# Solana Fork Visualizer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How to start the app:
 
-## Available Scripts
+Make sure your instance of InfluxDB is runnning and that you have set up your .env file to reflect the endpoints you want this app to use and the validator pubkey that you are running fork-vis on.
 
-In the project directory, you can run:
+Then in this directory, you can run:
 
 ### `npm start`
 
@@ -13,11 +13,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -29,42 +24,21 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## How it works:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+By running core Solana code with fork-vis functionality on a validator, you will begin to post data points to Influx that allow this fork visualizer application to peer into the state of the chain at any point in time. From there, you can replay the state of the network by hitting the play button and, for any point in time, you can see validators' voting history and the stake weight allotted to each fork tip. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Features:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Correlates network time to human readable time using InfluxDB
+- Allows user to go back to any point in time to see chain state
+- Shows a particular validator's voting history as well as their perception of how voting is going (via fork stake weight)
+- General visualization of bank_forks structure for a particular validator
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### To Dos:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Run fork-vis code on a separate thread on fork-vis Solana core branch
+- Update validator voting history and fork stake weights upon replay of graph
+- Stability testing of both app and core code

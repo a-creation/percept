@@ -13,8 +13,8 @@ edge {
   events: no;
 }
 node {
-	width: 40;
-	height: 40;
+	width: 100;
+	height: 100;
 	font-size: 9;
 	font-weight: bold;
 	min-zoomed-font-size: 4;
@@ -29,6 +29,7 @@ node {
 	text-outline-color: #fff;
 	text-outline-opacity: 1;
 	overlay-color: #fff;
+	margin: 5;
 }
 edge[interaction = "cc"] {
 	line-color: #FACD37;
