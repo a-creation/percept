@@ -44,3 +44,4 @@ By running core Solana code with fork-vis functionality on a validator, you will
 - Run fork-vis code on a separate thread on fork-vis Solana core branch
 - Update validator voting history and fork stake weights upon replay of graph
 - Stability testing of both app and core code
+- Add influxDB url and auth token to solana core env variables (right now just placeholders)
