@@ -1,5 +1,7 @@
 # Solana Fork Visualizer
 
+https://user-images.githubusercontent.com/60591313/188803144-0fe6afbd-40aa-40c0-ad08-d0b0714aebf0.mov
+
 ## How to start the app:
 
 Make sure your instance of InfluxDB is runnning and that you have set up your .env file to reflect the endpoints you want this app to use and the validator pubkey that you are running fork-vis on.
